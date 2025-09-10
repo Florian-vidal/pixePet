@@ -5,10 +5,9 @@ import { MyContext } from "./_layout";
 
 // Cette page a besoin des états hunger, happiness et energy pour fonctionner
 
-
 export default function Home() {
   // Récupérez les états depuis votre contexte ici
-  const { hunger, happiness, energy } = useContext(MyContext);
+  const { hunger, happiness, energy, condition } = useContext(MyContext);
 
   return (
     <View style={styles.container}>
@@ -16,7 +15,8 @@ export default function Home() {
       {/* Affichez les stats du PixelPet ici */}
       <Text style={styles.status}>Faim : {hunger}</Text>
       <Text style={styles.status}>Bonheur : {happiness}</Text>
-      <Text style={styles.status}>Energy : {energy}</Text>
+      <Text style={styles.status}>Energie : {energy}</Text>
+      <Text>{condition}</Text>
     </View>
   );
 }

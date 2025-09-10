@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 
 import { MyContext } from "./_layout";
 
@@ -7,7 +7,7 @@ import { MyContext } from "./_layout";
 
 export default function FoodScreen() {
   // Récupérez la fonction feedPet et l'état hunger depuis votre contexte ici
-  const { hunger } = useContext(MyContext);
+  const { hunger, setHunger, energy, setEnergy } = useContext(MyContext);
 
   const feedPetWithCheck = () => {
     // Implémentez la logique pour nourrir le PixelPet ici

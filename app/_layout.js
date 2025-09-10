@@ -10,10 +10,23 @@ export default function RootLayout() {
   const [happiness, setHappiness] = useState(50);
   const [energy, setEnergy] = useState(50);
 
+  const condition =
+    energy < 30 || hunger > 70
+      ? "Le PixelPet est fatigué ou a faim."
+      : "Le PixelPet se sent bien.";
+
   return (
     // Wrappez les tabs avec votre Provider ici
     <MyContext.Provider
-      value={{ hunger, setHunger, happiness, setHappiness, energy, setEnergy }}
+      value={{
+        hunger,
+        setHunger,
+        happiness,
+        setHappiness,
+        energy,
+        setEnergy,
+        condition,
+      }}
     >
       <Tabs>
         <Tabs.Screen name="index" options={{ title: "Accueil" }} />

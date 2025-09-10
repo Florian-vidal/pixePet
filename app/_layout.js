@@ -6,9 +6,9 @@ export const MyContext = createContext();
 
 export default function RootLayout() {
   // Initialisez vos états et fonctions ici
-  const [hunger, setHunger] = useState();
-  const [happiness, setHappiness] = useState();
-  const [energy, setEnergy] = useState();
+  const [hunger, setHunger] = useState(50);
+  const [happiness, setHappiness] = useState(50);
+  const [energy, setEnergy] = useState(50);
 
   return (
     // Wrappez les tabs avec votre Provider ici

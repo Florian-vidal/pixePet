@@ -7,8 +7,7 @@ import { MyContext } from "./_layout";
 
 export default function FoodScreen() {
   // Récupérez la fonction feedPet et l'état hunger depuis votre contexte ici
-  const [hunger, setHunger] = useState();
-  const [energy, setEnergy] = useState();
+  const { hunger } = useContext(MyContext);
 
   const feedPetWithCheck = () => {
     // Implémentez la logique pour nourrir le PixelPet ici
